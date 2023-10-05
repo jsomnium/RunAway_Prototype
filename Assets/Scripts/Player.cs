@@ -7,19 +7,21 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     public float speed;
-    public bool onChair = false;
-    public bool canSit;
     public Vector2 nextVec;
+
+    // 착석 관련
+    private Vector2 curChairPos;
+    public bool onChair = false;
+    public bool canSit = false;
+
+    // 조이스틱 관련
+    public Joystick Joy;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
     CapsuleCollider2D capCollider;
-    Vector2 curChairPos;
 
-    public Joystick Joy;
-
-    // Start is called before the first frame update
     void Start(){
         rigid = GetComponent<Rigidbody2D>();
         spriter = GetComponent<SpriteRenderer>();
@@ -27,7 +29,6 @@ public class Player : MonoBehaviour
         capCollider = GetComponent<CapsuleCollider2D>();
     }
 
-    // 하나의 프레임 마다 한 번씩 호출되는 함수
     void Update(){
         inputVec.x = Joy.Horizontal;
         //Input.GetAxisRaw("Horizontal");
@@ -72,10 +73,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D collid) {
+    void OnCollisionEnter2D(Collision2D collid) {
         if (collid.transform.CompareTag("Chair")){
             canSit = true;
             curChairPos = collid.transform.position;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collid)
+    {
+        if (collid.transform.CompareTag("Chair")){
+            canSit = false;
         }
     }
 }
