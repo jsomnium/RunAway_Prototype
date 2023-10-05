@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 3; i++){
-            for (int j = 1; j <= 2; j++){
+        for (int i = 0; i < 16; i++){
+            for (int j = 1; j <= 7; j++){
                 deskObject = Instantiate(deskPrefab);
                 deskObject.transform.position = new Vector2(i * 2, j * (-2f) - 1f);
             }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ixXoh2NtK7Pbbz1NbHlyaoNdmdMJ++GIRDrGA9/4D/Xu4VFavl3bUEWuBmQlL2j6b6onbucYlhwhU1HAxcK3NQ==",
+  "dgSpecHash": "n9Am99ABXRrlT3hVfv0QdxKPxoi8Z+LjrreRtA8+m499h6WaZR7mTAj3GEeoGPgnIpWPKfsGC+a3T13GQVHVAw==",
   "success": true,
-  "projectFilePath": "c:\\UnityProject\\RunAway_Prototype\\Assembly-CSharp-Editor.csproj",
+  "projectFilePath": "c:\\UnityProject\\RunAway_Prototype\\Assembly-CSharp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
