@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "RunAway_Prototype.sln"
+    "dotnet.defaultSolution": "RunAway_Prototype.sln",
+    "dotnet.preferCSharpExtension": true
 }

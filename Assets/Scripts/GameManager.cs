@@ -49,10 +49,10 @@ public class GameManager : MonoBehaviour
             for (int j = 0; j < 7; j++){
                 if (map1[i, j] == true) { // 1이라면 Prefab1
                     deskObject = Instantiate(Student);
-                    deskObject.transform.position = new Vector2(i * 2, j * (-2f) - 1f);
+                    deskObject.transform.position = new Vector2(i * 3, j * (-3f) - 1f);
                 } else if (map1[i,j] == false) { // 0이라면 Prefab2
                     deskObject = Instantiate(Desk);
-                    deskObject.transform.position = new Vector2(i * 2, j * (-2f) - 1f);
+                    deskObject.transform.position = new Vector2(i * 3, j * (-3f) - 1f);
                 }
             }
         }
